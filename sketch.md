@@ -5,7 +5,12 @@
 * **Deduplication:** Globally for all backups? Locally with backups? On chunk-level or file-level?
 * **Compression:** Choice of algorithms?
 * **Access/restore semantics:** Individual file history (like boxbackup)? Full snapshot (like duplicity)? What else?
-* **Lifecycle Mechanics:** Random access for deletion with user discretion (zbackup)? Heuristic (boxbackup)? Constrained by limited incrementals (duplicity)?
+* **Lifecycle Mechanics:**
+  * Individual file deletion possible?
+  * Methods of backup deletion:
+    * Random access with user discretion (like zbackup)?
+    * Autonomous heuristic based on quota/available space (like boxbackup)?
+    * Constrained by incrementals (like duplicity)?
 * **Secrecy:** Zero-knowledge server yes/no? Metadata exposed?
 * **Scope:** User-wide, system-wide, both?
 * **Privileges:** Needs root privileges yes/no?
