@@ -14,8 +14,12 @@
 * **Secrecy:** Zero-knowledge server yes/no? Metadata protected/exposed?
 * **Scope:** User-wide, system-wide, both?
 * **Privileges:** Needs root privileges yes/no?
-* **Authorization (server on client):** If pulling, server needs/doesn't need (root) shell access on client? Maybe doesn't apply because only pull semantics offered?
-* **Authorization (client on server):** If pushing, client needs/doesn't need shell access on server? Maybe doesn't apply because only push semantics offered?
+* **Authorization requirements (by server on client):**
+  * Only applies to *pulling* strategies
+  * Server needs/doesn't need full (root?) shell access on client for pull?
+* **Authorization requirements (by client on server):**
+  * Only applies to *pushing* strategies
+  * Client needs/doesn't need full shell access on server for pushing?
 * **Push or Pull:** Push? Pull? Both?
 * **Access protocol / server requirements:** Proprietary, requires server process? Generic access protocols, which ones? Left to be defined by lower layers (ie., fuse mounts, etc.)?
 * **Encryption:** Which methods/algos?
