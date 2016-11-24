@@ -43,3 +43,10 @@
 * attic
 * restic
 * zbackup
+
+## Thoughts on implementation 
+
+* Data shall be modeled in human-readable text format (thinking YAML…)
+* Presentation as interactive web page, allowing for filtering, sorting, transposition
+  * Preferably not generated but simply fetching and loading the data model from within the client
+
