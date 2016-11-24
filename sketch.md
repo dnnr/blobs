@@ -11,7 +11,7 @@
     * Random access with user discretion (like zbackup)?
     * Autonomous heuristic based on quota/available space (like boxbackup)?
     * Constrained by incrementals (like duplicity)?
-* **Secrecy:** Zero-knowledge server yes/no? Metadata exposed?
+* **Secrecy:** Zero-knowledge server yes/no? Metadata protected/exposed?
 * **Scope:** User-wide, system-wide, both?
 * **Privileges:** Needs root privileges yes/no?
 * **Authorization (server on client):** If pulling, server needs/doesn't need (root) shell access on client? Maybe doesn't apply because only pull semantics offered?
@@ -31,7 +31,7 @@
 * **Project health:** Unmaintained? Finished but dead? Alive and well?
 * **File selection:** Supports flexible include/exclude lists? CACHEDIR.TAG detection?
 * **Browsing:** FUSE? Listing? Is it efficient?
-* **(Not sure yet how to phrase this):** Whether or not it is possible to see the amount of space consumed by each backup and backed up file without disregarding the deduplication (for example: a FUSE mount using hardlinks to indicate at least identical files?) Not sure if this is actually solvable.
+* **Representation of disk usage:** Whether or not it is possible to see the amount of space consumed by each backup and backed up file without disregarding the deduplication (for example: a FUSE mount using hardlinks to indicate at least identical files?) Not sure if this is actually solvable.
 
 ## Shortlist of systems to classify
 
