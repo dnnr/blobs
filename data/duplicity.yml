@@ -1,0 +1,8 @@
+---
+
+name: Duplicity
+url: http://duplicity.nongnu.org/
+fields:
+    push-or-pull: push
+    compression: "gzip (optional)"
+    needs-root: false

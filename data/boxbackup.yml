@@ -1,0 +1,8 @@
+---
+
+name: BoxBackup
+url: https://www.boxbackup.org/
+fields:
+    push-or-pull: push
+    compression: "deflate"
+    needs-root: false
