@@ -41,21 +41,23 @@ renderedentries = []
 for entryfile, entry in entries:
     rendered = {
             'name': entry['name'],
-            'fields': {},
+            'fields': OrderedDict(),
             }
     renderedentries.append(rendered)
-    for fieldname, fieldvalue in entry['fields'].items():
-        if fieldname not in criteria:
+    for criterion in criteria.keys():
+        entryvalue = entry['fields'][criterion]
+        if criterion not in criteria:
             raise SystemExit("Unknown field '{}' used in '{}'"
-                             .format(fieldname, entryfile))
-        crit = criteria[fieldname]
-        if fieldvalue is True:
+                             .format(criterion, entryfile))
+        crit = criteria[criterion]
+        if entryvalue is True:
             renderedfield = 'Yes'
-        elif fieldvalue is False:
+        elif entryvalue is False:
             renderedfield = 'No'
         else:
-            renderedfield = str(fieldvalue)
-        rendered['fields'][fieldname] = {'rendered': renderedfield}
+            renderedfield = str(entryvalue)
+        rendered['fields'][criterion] = {'rendered': renderedfield}
+    pprint(rendered)
 
 # Load and render template
 j2env = Environment(loader=FileSystemLoader(scriptrelpath("template")))
