@@ -12,7 +12,11 @@
     * Autonomous heuristic based on quota/available space (like boxbackup)?
     * Constrained by incrementals (like duplicity)?
 * **Secrecy:** Zero-knowledge server yes/no? Metadata protected/exposed?
-* **Scope:** User-wide, system-wide, both?
+* **Deployment Scope:**
+  * (how to determine exactly? might be too ambiguous!)
+  * User-wide
+  * System-wide (implies user-servicability?)
+  * both?
 * **Privileges:** Needs root privileges yes/no?
 * **Authorization requirements (by server on client):**
   * Only applies to *pulling* strategies
