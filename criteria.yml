@@ -1,0 +1,12 @@
+---
+
+ - needs-root:
+    label: "Root privileges needed"
+ - compression:
+    label: "Compression"
+ - push-or-pull:
+    label: "Push/Pull"
+    values:
+        push: "push"
+        pull: "pull"
+        both: "both"
