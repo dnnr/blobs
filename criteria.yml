@@ -2,8 +2,14 @@
 
  - needs-root:
     label: "Root privileges needed"
+    values:
+        true: "Yes"
+        false: "No"
  - compression:
     label: "Compression"
+    values:
+        true: "Yes"
+        false: "No"
  - push-or-pull:
     label: "Push/Pull"
     values:

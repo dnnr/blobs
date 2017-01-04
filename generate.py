@@ -50,11 +50,7 @@ for entryfile, entry in entries:
             raise SystemExit("Unknown field '{}' used in '{}'"
                              .format(criterion, entryfile))
         crit = criteria[criterion]
-        if entryvalue is True:
-            renderedfield = 'Yes'
-        elif entryvalue is False:
-            renderedfield = 'No'
-        elif 'values' in crit and entryvalue in crit['values']:
+        if 'values' in crit and entryvalue in crit['values']:
             renderedfield = crit['values'][entryvalue]
         else:
             renderedfield = str(entryvalue)
