@@ -54,6 +54,8 @@ for entryfile, entry in entries:
             renderedfield = 'Yes'
         elif entryvalue is False:
             renderedfield = 'No'
+        elif 'values' in crit and entryvalue in crit['values']:
+            renderedfield = crit['values'][entryvalue]
         else:
             renderedfield = str(entryvalue)
         rendered['fields'][criterion] = {'rendered': renderedfield}
