@@ -46,10 +46,10 @@ for entryfile, entry in entries:
             }
     renderedentries.append(rendered)
     for criterion in criteria.keys():
+        if criterion not in entry['fields']:
+            raise SystemExit("Missing field '{}' for entry '{}'"
+                    .format(criterion, entryfile))
         entryvalue = entry['fields'][criterion]
-        if criterion not in criteria:
-            raise SystemExit("Unknown field '{}' used in '{}'"
-                             .format(criterion, entryfile))
         crit = criteria[criterion]
         if 'values' in crit and entryvalue in crit['values']:
             renderedfield = crit['values'][entryvalue]
