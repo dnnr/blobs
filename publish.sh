@@ -17,3 +17,5 @@ cp blobs.html "$tmpdir"/index.html
     git commit -m "…"
     git push -f git@github.com:dnnr/blobs.git HEAD:gh-pages
 )
+
+echo "Published on https://dnnr.github.io/blobs"
