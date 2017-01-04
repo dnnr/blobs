@@ -31,11 +31,12 @@
             <h1>BLoBS: The <small>(not yet very)</small> Big List of Backup Software</h1>
         </div>
         <table class="table">
-            <th>
+            <tr>
+                <th></th>
                 {% for critname, critparams in criteria.items() %}
-                    <td>{{ critparams.label }}</td>
+                    <th>{{ critparams.label }}</th>
                 {% endfor %}
-            </th>
+            </tr>
                 {% for entry in entries %}
                 <tr>
                     <td>{{ entry.name }}</td>
