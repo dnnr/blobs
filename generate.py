@@ -45,17 +45,16 @@ for entryfile, entry in entries:
             'fields': OrderedDict(),
             }
     renderedentries.append(rendered)
-    for criterion in criteria.keys():
-        if criterion not in entry['fields']:
+    for critkey, crit in criteria.items():
+        if critkey not in entry['fields']:
             raise SystemExit("Missing field '{}' for entry '{}'"
-                    .format(criterion, entryfile))
-        entryvalue = entry['fields'][criterion]
-        crit = criteria[criterion]
+                    .format(critkey, entryfile))
+        entryvalue = entry['fields'][critkey]
         if 'values' in crit and entryvalue in crit['values']:
             renderedfield = crit['values'][entryvalue]
         else:
             renderedfield = str(entryvalue)
-        rendered['fields'][criterion] = {'rendered': renderedfield}
+        rendered['fields'][critkey] = {'rendered': renderedfield}
     pprint(rendered)
 
 # Load and render template
