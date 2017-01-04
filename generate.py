@@ -41,6 +41,7 @@ renderedentries = []
 for entryfile, entry in entries:
     rendered = {
             'name': entry['name'],
+            'url': entry['url'],
             'fields': OrderedDict(),
             }
     renderedentries.append(rendered)

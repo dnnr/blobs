@@ -48,7 +48,7 @@
             <tbody>
                 {% for entry in entries %}
                 <tr>
-                    <td>{{ entry.name }}</td>
+                    <td><a href="{{ entry.url }}">{{ entry.name }}</a></td>
                     {% for f in entry.fields.values() %}
                         <td>{{ f.rendered }}</td>
                     {% endfor %}
